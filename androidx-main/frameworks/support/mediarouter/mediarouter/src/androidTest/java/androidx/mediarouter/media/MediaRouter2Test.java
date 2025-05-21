@@ -30,7 +30,6 @@ import android.media.RoutingSessionInfo;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Messenger;
-import android.support.mediacompat.testlib.util.PollingCheck;
 import android.text.TextUtils;
 
 import androidx.annotation.NonNull;
@@ -264,6 +263,10 @@ public class MediaRouter2Test {
         assertNull(createdController.mLastSetVolume);
         mMr2ProviderServiceAdapter.setRouteVolume(StubMediaRouteProviderService.ROUTE_ID1, 100);
         assertEquals(100, (int) createdController.mLastSetVolume);
+        MediaRouteProvider.RouteControllerOptions routeControllerOptions =
+                createdController.mRouteControllerOptions;
+        assertNotNull(routeControllerOptions);
+        assertEquals(mContext.getPackageName(), routeControllerOptions.getClientPackageName());
     }
 
     @SmallTest
