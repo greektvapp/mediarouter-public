@@ -620,8 +620,6 @@ public class MediaRouteControllerDialog extends AlertDialog {
                 MeasureSpec.UNSPECIFIED);
         setLayoutHeight(mMediaMainControlLayout, oldHeight);
         int artViewHeight = 0;
-        
-        
         int mainControllerHeight = getMainControllerHeight(canShowPlaybackControlLayout());
         int volumeGroupListCount = mGroupMemberRoutes.size();
         // Scale down volume group list items in landscape mode.
@@ -645,7 +643,6 @@ public class MediaRouteControllerDialog extends AlertDialog {
         // Maximum allowed height for controls to fit screen.
         int maximumControlViewHeight = visibleRect.height() - nonControlViewHeight;
 
-        
         mArtView.setVisibility(View.VISIBLE);
         desiredControlLayoutHeight = visibleGroupListHeight + mainControllerHeight;
 

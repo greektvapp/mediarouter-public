@@ -39,7 +39,6 @@ import androidx.core.util.ObjectsCompat;
  * remote playback media control intents to a single route.
  * </p>
  */
-@SuppressWarnings("NotCloseable")
 public class RemotePlaybackClient {
     static final String TAG = "RemotePlaybackClient";
     static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
